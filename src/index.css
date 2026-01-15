@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Patrick+Hand&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 15% 15%;
+    --primary: 20 15% 15%;
+    --primary-foreground: 0 0% 100%;
+    --border: 20 15% 15%;
+    --radius: 0px;
+  }
+  body {
+    @apply bg-[#fdfaf6] text-sketch-black font-hand antialiased;
+    background-image: radial-gradient(#33272a22 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+@layer components {
+  .sketch-card {
+    @apply bg-white border-3 border-sketch-black shadow-sketch transition-all;
+  }
+  .sketch-input {
+    @apply bg-white border-3 border-sketch-black px-4 py-2 focus:outline-none focus:ring-0 placeholder:text-muted-foreground;
+  }
+}
